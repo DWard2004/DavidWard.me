@@ -1,0 +1,144 @@
+/* This is for the hamburger bar and audio of the home page */
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+.bg video {
+  position: relative;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  background-size: cover;
+}
+
+.bg {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}
+
+.menu {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 50px;
+  color: white;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.hamburger-icon {
+  width: 45px;
+  height: 45px;
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+.menu.change .hamburger-icon span:nth-child(1) {
+  transform: rotate(-45deg) translate(-8px, 5px);
+  transform-origin: center;
+}
+
+.menu.change .hamburger-icon span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu.change .hamburger-icon span:nth-child(3) {
+  transform: rotate(45deg) translate(-8px, -5px);
+  transform-origin: center;
+}
+
+.hamburger-icon span {
+  display: flex;
+  width: 25px;
+  height: 3px;
+  background: white;
+  margin: 6px auto;
+  transition: all 0.3s ease-in-out;
+  z-index: 4;
+}
+
+.nav-links {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 0;
+  background: rgba(0, 0, 0, 0.9);
+  overflow: hidden;
+  transition: width 0.5s;
+  padding-top: 60px;
+  text-align: left;
+  z-index: 2;
+}
+
+.nav-links a {
+  padding: 10px 15px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  background: lightslategray;
+  color: white;
+}
+
+.personal-info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  z-index: 1;
+  font-size: 24px;
+}
+
+#bgvideo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  object-fit: cover;
+}
+
+#audioControl {
+  position: fixed;
+  top: 10px;
+  left: 20px;
+  padding: 10px 20px;
+  z-index: 3;
+  background: white;
+  color: black;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 20px;
+  z-index: 2;
+}

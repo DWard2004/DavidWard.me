@@ -1,0 +1,40 @@
+.profile-photo {
+    width: 200px; /* Adjust size as needed */
+    height: auto;
+    border-radius: 50%; /* Creates a circular image */
+    margin-right: 20px;
+    float: left; /* Aligns the photo to the left of the text */
+}
+
+.about-me {
+    display: flex;
+    align-items: center; /* Aligns items vertically */
+    margin-bottom: 20px; /* Provides space below the section */
+}
+
+.description h2 {
+    margin-top: 0;
+}
+
+.description p {
+    margin: 5px 0 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #333;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .profile-photo {
+        margin: 0 auto 20px; /* Centers the photo and adds space below on small screens */
+        display: block;
+    }
+
+    .about-me {
+        flex-direction: column;
+        align-items: center;
+    }
+}
