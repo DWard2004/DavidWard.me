@@ -1,8 +1,8 @@
 .profile-photo {
     width: 200px; /* Adjust size as needed */
     height: auto;
-    border-radius: 50%; /* Creates a circular image */
-    margin-right: 20px;
+    border-radius: 100%; /* Creates a circular image */
+    margin-right: 10px;
     float: left; /* Aligns the photo to the left of the text */
 }
 
@@ -29,7 +29,7 @@ footer {
 
 @media (max-width: 768px) {
     .profile-photo {
-        margin: 0 auto 20px; /* Centers the photo and adds space below on small screens */
+        margin: 0 auto 1px; /* Centers the photo and adds space below on small screens */
         display: block;
     }
 

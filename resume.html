@@ -1,48 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume</title>
+    <title>David Ward Resume</title>
     <style>
-        body, html {
+        body,
+        html {
             height: 100%;
             margin: 0;
             font-family: Arial, sans-serif;
             overflow-y: scroll;
             scrollbar-width: none;
         }
+
         body::-webkit-scrollbar {
             display: none;
         }
+
         .bg-video {
             position: fixed;
             right: 0;
             bottom: 0;
-            min-width: 100%; 
+            min-width: 100%;
             min-height: 100%;
             z-index: -1;
         }
+
         .wrapper {
             position: relative;
             padding-top: 100px;
             padding-bottom: 50px;
-            min-height: 100vh; 
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
         }
+
         .content {
             background-color: white;
             padding: 50px;
             border-radius: 25px;
             width: 80%;
             max-width: 1200px;
-            min-height: 100vh; /* Vertical height of essay box */
-            box-shadow: 0 0 20px rgba(0,0,0,0.6);
+            min-height: 100vh;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
             overflow: auto;
         }
+
         .download-button {
             background-color: white;
             color: black;
@@ -55,6 +62,7 @@
             width: 180px;
             text-align: center;
         }
+
         .hamburger {
             position: fixed;
             top: 20px;
@@ -63,8 +71,18 @@
             z-index: 100;
             cursor: pointer;
         }
+
+        ul {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+
+        .underline {
+            text-decoration: underline;
+        }
     </style>
 </head>
+
 <body>
     <script src="script.js"> </script>
     <link rel="stylesheet" href="style.css">
@@ -88,18 +106,78 @@
 
     <div class="wrapper">
         <div class="content">
-            <h1>Your Name</h1>
-            <p>Position | Contact Information</p>
-            <h2>About Me</h2>
-            <p>Short bio or introduction about yourself...</p>
-            <h2>Experience</h2>
-            <p>Detailed list of your past job experiences...</p>
-            <h2>Education</h2>
-            <p>Your educational background...</p>
-            <h2>Skills</h2>
-            <p>A list of your professional skills...</p>
+            <h1>David Ward</h1>
+            <p>Lancaster PA 17601<br>David@wardos.me ▪ 717-847-3443</p>
+            <hr>
+
+            <h2 class="underline">Overview</h2>
+            <p>IT student looking to obtain an internship/work experience in the Computer Networking field utilizing
+                education and experience while completing a college degree.</p>
+
+            <h2 class="underline">Education</h2>
+            <p><strong>Associate of Applied Science Computer & Network Systems Administration</strong><br>
+                Thaddeus Stevens College of Technology, Lancaster PA<br>
+                August 2023 – Present (Expected May 2025)<br>
+                GPA: 3.6/4.0</p>
+
+            <p><strong>Diploma</strong><br>
+                Hempfield High School, Landisville PA<br>
+                August 2019-2023</p>
+
+            <h2 class="underline">Related Skills/Coursework</h2>
+            <p>▪ PC Hardware & Desktop Support ▪ TCP/IP & Local Area Networking ▪ Operating Systems<br>
+                ▪ Systems Administration ▪ Telecom Technologies for WAN ▪ Linux ▪ Windows Server<br>
+                ▪ C# Coding ▪ Internetworking Devices & Concepts ▪ WEB Technologies ▪ Network Security</p>
+
+            <h2 class="underline">Work Experience</h2>
+            <p><strong>Remodeling Intern</strong><br>
+                M&G Estates ▪ Columbia, PA<br>
+                May 30th 2023 – August 9th 2023</p>
+            <ul>
+                <li>Collaborated with experienced remodeling professionals on residential projects.</li>
+                <li>Built loyal clientele through friendly interactions and consistent appreciation.</li>
+                <li>Performed tasks such as framing, finishing, demolition, roofing, electrical, and plumbing.</li>
+            </ul>
+
+            <p><strong>Assembly Technician Intern</strong><br>
+                Pelletron ▪ Lancaster, PA<br>
+                November 6th 2023 – April 19th 2024</p>
+            <ul>
+                <li>Performed the task of assembling Rotary Valves, DeDusters, and Finalizers.</li>
+                <li>Collaborated with senior technicians to resolve assembly issues.</li>
+                <li>Performed quality control tasks to identify defects and ensure compliance with specifications.</li>
+            </ul>
+
+            <p><strong>IT Support Technician</strong><br>
+                Warfel Construction ▪ East Petersburg, PA<br>
+                April 22nd 2024 – Present</p>
+            <ul>
+                <li>Collaborate closely with IT Manager to ensure seamless day-to-day operations of the IT Help Desk,
+                    enhancing the overall employee support experience.</li>
+                <li>Provide first-line support to employees, promptly addressing hardware and software issues to
+                    maintain business continuity and support operational efficiency.</li>
+                <li>Play a key role in upholding the company’s commitment to delivering exceptional service through
+                    effective IT solutions and user support.</li>
+            </ul>
+
+            <h2 class="underline">References</h2>
+            <p><strong>Dave Jackson</strong><br>
+                Operations Director, Pelletron Corporation, Lancaster PA<br>
+                (717)-381-3424<br>
+                Dave.jackson@pelletroncorp.com</p>
+
+            <p><strong>Joseph Moyer</strong><br>
+                Operations Supervisor, Pelletron Corporation, Lancaster PA<br>
+                (717)-381-4864<br>
+                Joseph.moyer@pelletroncorp.com</p>
+
+            <p><strong>Nathan Graham</strong><br>
+                President, M&G Estates LLC, Columbia PA<br>
+                (717) 376-3276<br>
+                mngestates.nathan@gmail.com</p>
         </div>
-        <a href="your-resume.pdf" download="YourName_Resume.pdf" class="download-button">Download Resume</a>
+        <a href="David_Ward_Resume.pdf" download="David_Ward_Resume.pdf" class="download-button">Download Resume</a>
     </div>
 </body>
+
 </html>
