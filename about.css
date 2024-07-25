@@ -1,40 +1,106 @@
-.profile-photo {
-    width: 200px; /* Adjust size as needed */
-    height: auto;
-    border-radius: 100%; /* Creates a circular image */
-    margin-right: 10px;
-    float: left; /* Aligns the photo to the left of the text */
+/* about.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+header {
+    background: #000; /* Black background for header */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+main {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 80px); /* Adjusting for header and footer height */
 }
 
 .about-me {
     display: flex;
-    align-items: center; /* Aligns items vertically */
-    margin-bottom: 20px; /* Provides space below the section */
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 40px; /* Increased padding */
+    max-width: 1000px; /* Increased max-width */
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    object-fit: cover;
 }
 
 .description h2 {
-    margin-top: 0;
+    margin: 0;
+    font-size: 2.5rem; /* Increased font size for headings */
+    color: #000; /* Better contrast on white background */
 }
 
 .description p {
-    margin: 5px 0 20px;
+    margin: 15px 0; /* Increased margin for better spacing */
+    font-size: 1.1rem; /* Increased font size for paragraphs */
+    line-height: 1.6;
 }
 
 footer {
-    text-align: center;
-    padding: 10px 0;
-    background: #333;
+    background: #000; /* Black background for footer */
     color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
 
 @media (max-width: 768px) {
-    .profile-photo {
-        margin: 0 auto 1px; /* Centers the photo and adds space below on small screens */
-        display: block;
+    .about-me {
+        padding: 20px; /* Adjusted padding for smaller screens */
+        max-width: 90%; /* Adjusted max-width for smaller screens */
     }
 
-    .about-me {
-        flex-direction: column;
-        align-items: center;
+    .profile-photo {
+        width: 120px;
+        height: 120px;
+    }
+
+    .description h2 {
+        font-size: 2rem; /* Adjust font size for smaller screens */
+    }
+
+    .description p {
+        font-size: 1rem; /* Adjust font size for smaller screens */
     }
 }
