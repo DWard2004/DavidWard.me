@@ -27,7 +27,4 @@ document.addEventListener('DOMContentLoaded', function () {
         event.stopPropagation();
         toggleMenu();
     });
-
-    // Expose function for inline onclick handlers
-    window.toggleMenu = toggleMenu;
 });
