@@ -54,7 +54,8 @@
             const audio = document.getElementById('bgmusic');
             const audioControl = document.getElementById('audioControl');
 
-            audioControl.textContent = audio.paused ? 'Pause Audio' : 'Play Audio';
+            // Show the opposite action since the button controls playback
+            audioControl.textContent = audio.paused ? 'Play Audio' : 'Pause Audio';
 
             audioControl.addEventListener('click', function () {
                 toggleAudio();
