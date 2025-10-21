@@ -44,6 +44,30 @@ img {
 
 .site-footer--dark {
     background: #000;
+
+body {
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.site-header {
+    position: relative;
+    z-index: 1000;
+}
+
+.site-footer {
+    background: var(--color-surface);
+    color: var(--color-text-light);
+    text-align: center;
+    padding: 1rem 1.5rem;
+}
+
+.site-footer--dark {
+    background: #000;
 }
 
 /* Hero section */
@@ -148,6 +172,12 @@ img {
 }
 
 .hamburger-icon {
+    position: relative;
+    width: 2rem;
+    height: 1.5rem;
+    background: transparent;
+    border: 0;
+    padding: 0;
     width: 100%;
     height: 100%;
     background: transparent;
@@ -162,12 +192,31 @@ img {
 }
 
 .hamburger-icon span {
+    position: absolute;
+    left: 0;
+    width: 100%;
     display: block;
     width: 1.75rem;
     height: 3px;
     background: var(--color-text-light);
     transition: transform var(--transition-duration) ease, opacity var(--transition-duration) ease;
     border-radius: 2px;
+}
+
+.hamburger-icon span:nth-child(1) {
+    top: 0;
+}
+
+.hamburger-icon span:nth-child(2) {
+    top: calc(50% - 1.5px);
+}
+
+.hamburger-icon span:nth-child(3) {
+    bottom: 0;
+}
+
+.menu.change .hamburger-icon span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
 }
 
 .menu.change .hamburger-icon span:nth-child(1) {
@@ -179,6 +228,7 @@ img {
 }
 
 .menu.change .hamburger-icon span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
     transform: translateY(-6px) rotate(45deg);
 }
 
