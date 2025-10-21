@@ -1,61 +1,84 @@
+var NAVIGATION_TEMPLATE = [
+    '<div class="menu">',
+    '    <button class="hamburger-icon" type="button" aria-label="Toggle navigation" aria-expanded="false">',
+    '        <span></span>',
+    '        <span></span>',
+    '        <span></span>',
+    '    </button>',
+    '</div>',
+    '<nav class="nav-links" aria-hidden="true">',
+    '    <a href="index.html">Home</a>',
+    '    <a href="about.html">About David</a>',
+    '    <a href="vpn.html">VPN Essay</a>',
+    '    <a href="resume.html">Resume</a>',
+    '</nav>'
+].join('');
+
 // Setup menu interactions once navigation markup is available
 function setupMenuInteractions() {
     var menu = document.querySelector('.menu');
+    var toggleButton = menu ? menu.querySelector('.hamburger-icon') : null;
     var nav = document.querySelector('.nav-links');
 
-    if (!menu || !nav) {
+    if (!menu || !toggleButton || !nav) {
         return;
     }
 
-    function toggleMenu() {
-        nav.style.width = nav.style.width === '250px' ? '0' : '250px';
-        menu.classList.toggle('change');
+    function openMenu() {
+        nav.style.width = '250px';
+        menu.classList.add('change');
+        toggleButton.setAttribute('aria-expanded', 'true');
+        nav.setAttribute('aria-hidden', 'false');
+    }
+
+    function closeMenu() {
+        nav.style.width = '0';
+        menu.classList.remove('change');
+        toggleButton.setAttribute('aria-expanded', 'false');
+        nav.setAttribute('aria-hidden', 'true');
+    }
+
+    function isMenuOpen() {
+        return menu.classList.contains('change');
+    }
+
+    function toggleMenu(event) {
+        if (event) {
+            event.stopPropagation();
+        }
+
+        if (isMenuOpen()) {
+            closeMenu();
+        } else {
+            openMenu();
+        }
     }
 
     document.addEventListener('click', function (event) {
         var clickInsideMenu = menu.contains(event.target);
         var clickInsideNav = nav.contains(event.target);
 
-        if (!clickInsideMenu && !clickInsideNav && nav.style.width === '250px') {
-            nav.style.width = '0';
-            menu.classList.remove('change');
+        if (!clickInsideMenu && !clickInsideNav && isMenuOpen()) {
+            closeMenu();
         }
     });
 
-    menu.addEventListener('click', function (event) {
-        event.stopPropagation();
-        toggleMenu();
-    });
-}
-
-function setupAudioControls() {
-    var audio = document.getElementById('bgmusic');
-    var control = document.getElementById('audioControl');
-
-    if (!audio || !control) {
-        return;
-    }
-
-    function updateLabel() {
-        control.textContent = audio.paused ? 'Play Audio' : 'Pause Audio';
-        control.setAttribute('aria-pressed', audio.paused ? 'false' : 'true');
-    }
-
-    // Ensure audio is paused on load until user interaction
-    audio.pause();
-    updateLabel();
-
-    control.addEventListener('click', function () {
-        if (audio.paused) {
-            audio.play();
-        } else {
-            audio.pause();
+    document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape' && isMenuOpen()) {
+            closeMenu();
+            toggleButton.focus();
         }
     });
 
-    audio.addEventListener('play', updateLabel);
-    audio.addEventListener('pause', updateLabel);
-    audio.addEventListener('ended', updateLabel);
+    Array.prototype.forEach.call(nav.querySelectorAll('a'), function (link) {
+        link.addEventListener('click', function () {
+            closeMenu();
+        });
+    });
+
+    menu.addEventListener('click', toggleMenu);
+
+    closeMenu();
 }
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -63,22 +86,24 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (!placeholder) {
         setupMenuInteractions();
-        setupAudioControls();
         return;
     }
 
     fetch('nav.html')
         .then(function (response) {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+
             return response.text();
         })
         .then(function (html) {
             placeholder.innerHTML = html;
             setupMenuInteractions();
-            setupAudioControls();
         })
         .catch(function (error) {
-            console.error('Failed to load navigation:', error);
+            console.warn('Failed to load navigation via fetch. Falling back to inline template.', error);
+            placeholder.innerHTML = NAVIGATION_TEMPLATE;
             setupMenuInteractions();
-            setupAudioControls();
         });
 });
