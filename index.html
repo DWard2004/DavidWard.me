@@ -5,8 +5,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>David Ward | Home</title>
-    <script src="script.js" defer></script>
+    <title>David Ward | Blog</title>
+    <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -16,83 +16,48 @@
             <source src="movie.mp4" type="video/mp4">
             Your browser does not support HTML5 video.
         </video>
-
-        <div class="overlay">
-            <header class="site-header">
-                <button id="audioControl" type="button" aria-controls="bgmusic" aria-label="Toggle background audio">Play Audio</button>
-                <div id="nav-placeholder"></div>
-            </header>
-
-            <main class="home-content">
-                <section class="hero" aria-labelledby="home-title">
-                    <div class="hero-copy">
-                        <p class="hero-kicker">Network Administrator &amp; IT Strategist</p>
-                        <h1 id="home-title">David Ward</h1>
-                        <p class="hero-lede">
-                            I help organizations translate complex technology into reliable, human-centered solutions. From
-                            infrastructure upgrades to empowering end users, I bring calm, clarity, and measurable results.
-                        </p>
-                        <div class="hero-actions">
-                            <a class="btn primary" href="about.html">Discover My Story</a>
-                            <a class="btn" href="resume.html">View Resume</a>
-                        </div>
-                    </div>
-                    <div class="hero-highlights" aria-label="Key achievements">
-                        <div class="highlight-card">
-                            <h3>13+ Years Experience</h3>
-                            <p>Delivering resilient networks and responsive support across construction and manufacturing.</p>
-                        </div>
-                        <div class="highlight-card">
-                            <h3>Security Focused</h3>
-                            <p>Championing VPN adoption, zero-trust practices, and proactive vulnerability management.</p>
-                        </div>
-                        <div class="highlight-card">
-                            <h3>People First</h3>
-                            <p>Building trust with teams through empathy, training, and transparent communication.</p>
-                        </div>
-                    </div>
-                </section>
-
-                <section class="pillars" aria-labelledby="pillars-title">
-                    <h2 id="pillars-title">How I Make Technology Work for You</h2>
-                    <div class="pillar-grid">
-                        <article class="pillar-card">
-                            <h3>Infrastructure Leadership</h3>
-                            <p>Align business priorities with scalable hardware, cloud, and connectivity strategies that stay
-                                ahead of demand.</p>
-                        </article>
-                        <article class="pillar-card">
-                            <h3>Operational Excellence</h3>
-                            <p>Design processes that reduce downtime, accelerate onboarding, and keep stakeholders in sync.</p>
-                        </article>
-                        <article class="pillar-card">
-                            <h3>Collaborative Problem Solving</h3>
-                            <p>Partner with teams to diagnose issues quickly, implement sustainable fixes, and share knowledge.</p>
-                        </article>
-                    </div>
-                </section>
-
-                <section class="callout" aria-labelledby="callout-title">
-                    <div class="callout-content">
-                        <h2 id="callout-title">Let&rsquo;s Build What&rsquo;s Next</h2>
-                        <p>
-                            Whether you need to modernize your network, enhance security, or empower your team, I bring the
-                            mix of technical depth and people skills to make it happen.
-                        </p>
-                        <a class="btn primary" href="mailto:dward@example.com">Start a Conversation</a>
-                    </div>
-                </section>
-            </main>
-
-            <footer>
-                <p>Welcome To My Journey</p>
-            </footer>
-        </div>
-
-        <audio id="bgmusic" src="audio.mp3">
+        <audio id="bgmusic" src="audio.mp3" autoplay>
             Your browser does not support the audio element.
         </audio>
+        <button id="audioControl">Play Audio</button>
+
+        <div id="nav-placeholder"></div>
+        <div class="personal-info">
+            <h1>David Ward</h1>
+            <p>Network Administrator At Warfel Construction</p>
+        </div>
     </div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const audio = document.getElementById('bgmusic');
+            const audioControl = document.getElementById('audioControl');
+
+            // Show the opposite action since the button controls playback
+            audioControl.textContent = audio.paused ? 'Play Audio' : 'Pause Audio';
+
+            audioControl.addEventListener('click', function () {
+                toggleAudio();
+            });
+        });
+
+        function toggleAudio() {
+            const audio = document.getElementById('bgmusic');
+            const audioControl = document.getElementById('audioControl');
+            if (audio.paused) {
+                audio.play();
+                audioControl.textContent = 'Pause Audio';
+            } else {
+                audio.pause();
+                audioControl.textContent = 'Play Audio';
+            }
+        }
+    </script>
+
+    <footer>
+        <p>Welcome To My Journey</p>
+    </footer>
 </body>
 
 </html>
