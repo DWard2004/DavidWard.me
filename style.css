@@ -404,20 +404,6 @@ body {
   line-height: 1.7;
 }
 
-.callout {
-  text-align: center;
-}
-
-.callout-content {
-  display: grid;
-  gap: 1rem;
-  justify-items: center;
-}
-
-.callout p {
-  max-width: 520px;
-}
-
 /* Audio control */
 #audioControl {
   padding: 0.75rem 1.5rem;
@@ -628,12 +614,19 @@ body {
 
 /* Callout */
 .callout {
+  text-align: center;
   background: rgba(84, 224, 211, 0.12);
   border-radius: 24px;
   border: 1px solid rgba(125, 248, 222, 0.4);
   padding: clamp(2rem, 5vw, 3rem);
   box-shadow: 0 25px 55px rgba(4, 14, 23, 0.45);
   max-width: 850px;
+}
+
+.callout-content {
+  display: grid;
+  gap: 1rem;
+  justify-items: center;
 }
 
 .callout h2 {
@@ -646,6 +639,7 @@ body {
   margin: 0 0 1.5rem;
   color: #d7edf6;
   line-height: 1.7;
+  max-width: 520px;
 }
 
 /* Footer */
