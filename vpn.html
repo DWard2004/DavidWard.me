@@ -5,21 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VPN Fundamentals</title>
-    <link rel="stylesheet" href="vpn.css">
-    <script src="script.js"> </script>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="vpn.css">
+    <script src="script.js" defer></script>
 
 </head>
 
 <body>
-    <div id="nav-placeholder"></div>
+    <header class="site-header">
+        <div id="nav-placeholder"></div>
+    </header>
 
-    <header>
-        <h1>VPN Fundamentals</h1>
-        <nav>
-            <ul>
-                <li><a href="#intro">Overview of VPNs</a></li>
-                <li><a href="#how-it-works">How VPNs Work</a></li>
+    <main>
+        <section class="vpn-header">
+            <h1>VPN Fundamentals</h1>
+            <nav>
+                <ul>
+                    <li><a href="#intro">Overview of VPNs</a></li>
+                    <li><a href="#how-it-works">How VPNs Work</a></li>
                 <li><a href="#Benefits-and-Uses-of-VPNs">Benefits</a></li>
                 <li><a href="#Geo-Restricted-Content">Geo-Restrictions</a></li>
                 <li><a href="#Bypassing-Censorship">Bypassing Censorship</a></li>
@@ -27,9 +30,8 @@
                 <li><a href="#security">Choosing A VPN</a></li>
                 <li><a href="#Conclusion">Conclusion</a></li>
             </ul>
-        </nav>
-    </header>
-    <main>
+            </nav>
+        </section>
         <section id="intro">
             <h1> Overview of Virtual Private Networks (VPNs)</h1>
             <h2>What is a VPN?</h2>
@@ -166,11 +168,7 @@
 
         </section>
     </main>
-    <br>
-    <br>
-    <br>
-    <br>
-    <footer>
+    <footer class="site-footer site-footer--dark">
         <p>Copyright © 2023 All rights reserved.</p>
     </footer>
 </body>

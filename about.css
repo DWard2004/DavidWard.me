@@ -8,14 +8,14 @@ body {
     background-color: #f4f4f4;
 }
 
-header {
-    background: #000; /* Black background for header */
+.page-header {
+    background: #000;
     color: #fff;
     padding: 20px;
     text-align: center;
 }
 
-header h1 {
+.page-header h1 {
     margin: 0;
     font-size: 2.5rem;
 }
@@ -56,14 +56,12 @@ main {
 }
 
 .description p {
-    margin: 15px 0; /* Increased margin for better spacing */
-    font-size: 1.1rem; /* Increased font size for paragraphs */
+    margin: 15px 0;
+    font-size: 1.1rem;
     line-height: 1.6;
 }
 
-footer {
-    background: #000; /* Black background for footer */
-    color: #fff;
+.site-footer {
     text-align: center;
     padding: 15px 0;
     position: fixed;
@@ -72,16 +70,17 @@ footer {
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
 }
 
-footer p {
-    margin: 0;
+.site-footer--dark {
+    background: #000;
+    color: #fff;
 }
 
-footer a {
+.site-footer--dark a {
     color: #fff;
     text-decoration: none;
 }
 
-footer a:hover {
+.site-footer--dark a:hover {
     text-decoration: underline;
 }
 
@@ -101,6 +100,6 @@ footer a:hover {
     }
 
     .description p {
-        font-size: 1rem; /* Adjust font size for smaller screens */
+        font-size: 1rem;
     }
 }
