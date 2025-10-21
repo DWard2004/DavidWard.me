@@ -19,6 +19,10 @@
 
         <div class="overlay">
             <header class="site-header">
+                <button id="audioControl" type="button" aria-controls="bgmusic" aria-pressed="false"
+                    aria-label="Toggle background audio">
+                    Play Audio
+                </button>
                 <div id="nav-placeholder"></div>
             </header>
 
@@ -37,6 +41,20 @@
                             <a class="btn primary" href="about.html">Learn More About Me</a>
                             <a class="btn" href="resume.html">View Resume</a>
                         </div>
+                    </div>
+                    <div class="hero-metrics" aria-label="Career highlights">
+                        <article class="metric-card">
+                            <h2>13<span>+</span></h2>
+                            <p>Years delivering network and systems reliability.</p>
+                        </article>
+                        <article class="metric-card">
+                            <h2>24/7</h2>
+                            <p>Support mindset that keeps construction crews productive.</p>
+                        </article>
+                        <article class="metric-card">
+                            <h2>100%</h2>
+                            <p>Commitment to security, VPN adoption, and proactive monitoring.</p>
+                        </article>
                     </div>
                 </section>
 
@@ -84,6 +102,9 @@
             </footer>
         </div>
 
+        <audio id="bgmusic" src="audio.mp3">
+            Your browser does not support the audio element.
+        </audio>
     </div>
 </body>
 
