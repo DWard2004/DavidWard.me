@@ -1,4 +1,4 @@
-/*VPN.html styling */
+/* vpn.css */
 
 body {
     font-family: 'Arial', sans-serif;
@@ -9,15 +9,14 @@ body {
     color: #333;
 }
 
-header {
+.vpn-header {
     background: #333;
     color: #fff;
     padding: 10px 20px;
     text-align: center;
-    position: relative;
 }
 
-nav ul {
+.vpn-header nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -26,11 +25,11 @@ nav ul {
     flex-wrap: wrap;
 }
 
-nav ul li {
+.vpn-header nav ul li {
     margin: 5px;
 }
 
-nav a {
+.vpn-header nav a {
     color: #fff;
     padding: 10px 15px;
     text-decoration: none;
@@ -38,7 +37,8 @@ nav a {
     transition: background-color 0.3s;
 }
 
-nav a:hover, nav a:focus {
+.vpn-header nav a:hover,
+.vpn-header nav a:focus {
     background-color: #555;
 }
 
@@ -52,27 +52,20 @@ section {
     margin-bottom: 20px;
 }
 
-footer {
-    text-align: center;
-    padding: 10px 0;
-    background: #333;
-    color: #fff;
-}
-
 h1, h2 {
     color: #333;
 }
 
 @media (max-width: 768px) {
-    nav ul {
+    .vpn-header nav ul {
         flex-direction: column;
     }
 
-    nav a {
+    .vpn-header nav a {
         display: block;
     }
 
-    header {
+    .vpn-header {
         padding: 10px 0;
     }
 }
@@ -83,17 +76,17 @@ h1, h2 {
         margin: 0;
     }
 
-    nav ul {
+    .vpn-header nav ul {
         width: 100%;
         padding: 0;
     }
 
-    nav ul li {
+    .vpn-header nav ul li {
         display: block;
         text-align: center;
     }
 
-    nav a {
+    .vpn-header nav a {
         padding: 10px;
         width: 100%;
     }
