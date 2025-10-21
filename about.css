@@ -1,106 +1,181 @@
-/* about.css */
-body {
-    font-family: Arial, sans-serif;
+:root {
+    --bg-color: #0b0f19;
+    --card-bg: #121829;
+    --accent: #4da3ff;
+    --text-primary: #f4f7ff;
+    --text-secondary: #a9b4d6;
+    --card-radius: 18px;
+    --max-width: 1100px;
+    --shadow: 0 24px 60px rgba(6, 11, 38, 0.45);
+}
+
+body.about-page {
+    font-family: 'Segoe UI', Roboto, sans-serif;
     margin: 0;
     padding: 0;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f4f4f4;
+    background: radial-gradient(circle at top left, #1e2a4a, #090b13 55%, #05060b);
+    color: var(--text-primary);
+    min-height: 100vh;
 }
 
-header {
-    background: #000; /* Black background for header */
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 2.5rem;
-}
-
-main {
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: calc(100vh - 80px); /* Adjusting for header and footer height */
-}
-
-.about-me {
+.about-wrapper {
+    margin: 0 auto;
+    padding: 120px 24px 80px;
+    max-width: var(--max-width);
     display: flex;
     flex-direction: column;
+    gap: 48px;
+}
+
+.about-header {
+    text-align: center;
+}
+
+.about-header h1 {
+    margin: 0 0 12px;
+    font-size: clamp(2.4rem, 3vw + 1rem, 3.6rem);
+    letter-spacing: 0.35rem;
+    text-transform: uppercase;
+}
+
+.tagline {
+    color: var(--text-secondary);
+    font-size: clamp(1rem, 1vw + 0.8rem, 1.2rem);
+    margin: 0;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: minmax(260px, 320px) 1fr;
+    gap: 32px;
+    align-items: stretch;
+}
+
+.card {
+    background: var(--card-bg);
+    border-radius: var(--card-radius);
+    padding: 32px;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.profile-card {
+    position: relative;
     align-items: center;
     text-align: center;
-    background-color: #fff;
-    border-radius: 8px;
-    padding: 40px; /* Increased padding */
-    max-width: 1000px; /* Increased max-width */
-    margin: 0 auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    gap: 16px;
 }
 
 .profile-photo {
-    width: 150px;
-    height: 150px;
+    width: 160px;
+    height: 160px;
     border-radius: 50%;
-    margin-bottom: 20px;
     object-fit: cover;
+    border: 4px solid rgba(77, 163, 255, 0.5);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
 }
 
-.description h2 {
+.profile-info h2 {
     margin: 0;
-    font-size: 2.5rem; /* Increased font size for headings */
-    color: #000; /* Better contrast on white background */
+    font-size: 1.8rem;
 }
 
-.description p {
-    margin: 15px 0; /* Increased margin for better spacing */
-    font-size: 1.1rem; /* Increased font size for paragraphs */
+.role {
+    font-weight: 600;
+    color: var(--accent);
+    margin: 8px 0 0;
+}
+
+.details {
+    color: var(--text-secondary);
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+.highlights p {
+    margin: 0;
+    font-size: 0.98rem;
     line-height: 1.6;
 }
 
-footer {
-    background: #000; /* Black background for footer */
-    color: #fff;
-    text-align: center;
-    padding: 15px 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+.info-cards {
+    display: grid;
+    gap: 24px;
 }
 
-footer p {
+.info-cards h3,
+.focus-grid h3 {
+    margin: 0;
+    font-size: 1.4rem;
+}
+
+.info-cards p,
+.focus-grid li {
+    color: var(--text-secondary);
+    line-height: 1.7;
     margin: 0;
 }
 
-footer a {
-    color: #fff;
+.focus-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+}
+
+.focus-grid ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 12px;
+}
+
+.focus-grid li::before {
+    content: '\2022';
+    color: var(--accent);
+    margin-right: 10px;
+}
+
+.about-footer {
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.about-footer a {
+    color: var(--accent);
     text-decoration: none;
 }
 
-footer a:hover {
+.about-footer a:hover,
+.about-footer a:focus {
     text-decoration: underline;
 }
 
-@media (max-width: 768px) {
-    .about-me {
-        padding: 20px; /* Adjusted padding for smaller screens */
-        max-width: 90%; /* Adjusted max-width for smaller screens */
+@media (max-width: 980px) {
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-card {
+        max-width: 460px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .about-wrapper {
+        padding-top: 100px;
+    }
+
+    .card {
+        padding: 24px;
     }
 
     .profile-photo {
-        width: 120px;
-        height: 120px;
-    }
-
-    .description h2 {
-        font-size: 2rem; /* Adjust font size for smaller screens */
-    }
-
-    .description p {
-        font-size: 1rem; /* Adjust font size for smaller screens */
+        width: 130px;
+        height: 130px;
     }
 }
