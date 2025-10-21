@@ -19,6 +19,10 @@
 
         <div class="overlay">
             <header class="site-header">
+                <button id="audioControl" type="button" aria-controls="bgmusic" aria-pressed="false"
+                    aria-label="Toggle background audio">
+                    Play Audio
+                </button>
                 <div id="nav-placeholder"></div>
             </header>
 
@@ -38,6 +42,20 @@
                             <a class="btn" href="resume.html">View Resume</a>
                         </div>
                     </div>
+                    <div class="hero-metrics" aria-label="Career highlights">
+                        <article class="metric-card">
+                            <h2>13<span>+</span></h2>
+                            <p>Years delivering network and systems reliability.</p>
+                        </article>
+                        <article class="metric-card">
+                            <h2>24/7</h2>
+                            <p>Support mindset that keeps construction crews productive.</p>
+                        </article>
+                        <article class="metric-card">
+                            <h2>100%</h2>
+                            <p>Commitment to security, VPN adoption, and proactive monitoring.</p>
+                        </article>
+                    </div>
                 </section>
 
                 <section class="intro" aria-labelledby="intro-title">
@@ -49,50 +67,21 @@
                     </p>
                 </section>
 
-                <section class="strengths" aria-labelledby="strengths-title">
-                    <div class="section-intro">
-                        <h2 id="strengths-title">How I Keep Teams Moving</h2>
-                        <p>
-                            Years in construction technology taught me that reliable systems and clear communication are the
-                            foundation of every successful project. I align IT strategy with business priorities so every crew
-                            stays productive and connected.
-                        </p>
-                    </div>
-                    <ul class="strengths-list">
-                        <li>
-                            <h3>Resilient Network Operations</h3>
-                            <p>Proactively maintaining core infrastructure, monitoring performance, and planning upgrades before
-                                they impact the field.</p>
-                        </li>
-                        <li>
-                            <h3>Security That Scales</h3>
-                            <p>Rolling out VPN standards, MFA, and layered defenses that protect data from the office to the
-                                jobsite without slowing people down.</p>
-                        </li>
-                        <li>
-                            <h3>Support with a Human Touch</h3>
-                            <p>Translating complex issues into everyday language, documenting solutions, and coaching teams so
-                                they feel confident using new tools.</p>
-                        </li>
-                    </ul>
-                </section>
-
-                <section class="experience" aria-labelledby="experience-title">
-                    <div class="experience-panel">
-                        <h2 id="experience-title">Beyond the Resume</h2>
-                        <p>
-                            I thrive where there&rsquo;s a blend of legacy systems and new initiatives. Whether the challenge is a
-                            multi-site network refresh or supporting a fast-moving project team, I dive in, stabilize what&rsquo;s in
-                            place, and build a roadmap for what&rsquo;s next.
-                        </p>
-                    </div>
-                    <div class="experience-panel">
-                        <h3>Recent Wins</h3>
-                        <ul>
-                            <li>Guided a VPN migration that cut remote login issues by 60% while improving overall security.</li>
-                            <li>Standardized hardware deployments across offices, reducing onboarding time for new hires.</li>
-                            <li>Created documentation and quick-reference guides that boost self-service troubleshooting.</li>
-                        </ul>
+                <section class="focus-areas" aria-labelledby="focus-title">
+                    <h2 id="focus-title">Where I Bring the Most Value</h2>
+                    <div class="focus-grid">
+                        <article class="focus-card">
+                            <h3>Infrastructure Leadership</h3>
+                            <p>Designing networks that scale with demand, align with budget, and stay ahead of downtime.</p>
+                        </article>
+                        <article class="focus-card">
+                            <h3>Security &amp; Continuity</h3>
+                            <p>Implementing VPN standards, layered defenses, and backup strategies that protect every jobsite.</p>
+                        </article>
+                        <article class="focus-card">
+                            <h3>Empowering People</h3>
+                            <p>Coaching teams through change, documenting processes, and keeping communication simple and clear.</p>
+                        </article>
                     </div>
                 </section>
 
@@ -113,6 +102,9 @@
             </footer>
         </div>
 
+        <audio id="bgmusic" src="audio.mp3">
+            Your browser does not support the audio element.
+        </audio>
     </div>
 </body>
 
