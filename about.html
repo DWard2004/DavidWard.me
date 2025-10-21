@@ -1,32 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me - David Ward</title>
     <link rel="stylesheet" href="about.css">
-    <script src="script.js"> </script>
+    <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css">
 </head>
-
-<body>
+<body class="about-page">
     <div id="nav-placeholder"></div>
-    <header>
-        <h1>About Me</h1>
-    </header>
-    <main>
-        <section class="about-me">
-            <img src="DWard2024.jpg" alt="David Ward" class="profile-photo">
-            <div class="description">
-                <h2>David Ward</h2>
-                <p>Hello, my name is David Ward. My favorite hobbies include ice hockey, video games, and riding ATVs in the woods. I am currently a student at Thaddeus Stevens College of Technology, pursuing a career in Computer Networking.</p>
+
+    <main class="about-wrapper">
+        <header class="about-header">
+            <h1>ABOUT DAVID</h1>
+            <p class="tagline">Network administrator, lifelong learner, and outdoor enthusiast.</p>
+        </header>
+
+        <section class="about-content">
+            <div class="profile-card card">
+                <img src="DWard2024.jpg" alt="David Ward" class="profile-photo">
+                <div class="profile-info">
+                    <h2>David Ward</h2>
+                    <p class="role">Network Administrator &bull; WAREL Construction</p>
+                    <p class="details">Current student at Thaddeus Stevens College of Technology</p>
+                    <p class="details">Passionate about technology, problem-solving, and building resilient networks.</p>
+                    <div class="highlights">
+                        <p>On the weekends you can find me on the ice rink, gaming with friends, or taking ATVs through wooded trails.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-cards">
+                <article class="card">
+                    <h3>Hi, I'm David!</h3>
+                    <p>Technology has always been my favorite way to solve real-world problems. During the day I keep the team at WAREL Construction connected as a network administrator, and by night I'm sharpening my skills at Thaddeus Stevens College of Technology. The combination of professional experience and classroom learning keeps my skills cutting-edge and practical.</p>
+                </article>
+                <article class="card">
+                    <h3>What Keeps Me Inspired</h3>
+                    <p>Whether I'm on the ice playing hockey, gaming with my friends online, or navigating wooded trails on an ATV, I love exploring how technology enhances every moment. I'm always curious about the next big innovation—especially how new ways to collaborate and stay safe shape the next decade of networking.</p>
+                </article>
             </div>
         </section>
+
+        <section class="focus-grid">
+            <article class="card">
+                <h3>Focus Areas</h3>
+                <ul>
+                    <li>Secure network design</li>
+                    <li>Systems administration</li>
+                    <li>Infrastructure monitoring</li>
+                    <li>Automation for routine network tasks</li>
+                </ul>
+            </article>
+            <article class="card">
+                <h3>Currently Exploring</h3>
+                <ul>
+                    <li>Cloud-based infrastructure solutions</li>
+                    <li>Zero trust security approaches</li>
+                    <li>Strategies for building resilient smart homes</li>
+                    <li>Tools for simplifying remote collaboration</li>
+                </ul>
+            </article>
+        </section>
+
     </main>
-    <footer>
-        <p>Contact me at <a href="mailto:david@wardos.me">david@wardos.me</a></p>
+    <footer class="about-footer">
+        <div class="footer-content">
+            <p>Contact me at <a href="mailto:david@wardos.me">david@wardos.me</a></p>
+        </div>
     </footer>
 </body>
-
 </html>
