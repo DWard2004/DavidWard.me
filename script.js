@@ -28,11 +28,42 @@ function setupMenuInteractions() {
     });
 }
 
+function setupAudioControls() {
+    var audio = document.getElementById('bgmusic');
+    var control = document.getElementById('audioControl');
+
+    if (!audio || !control) {
+        return;
+    }
+
+    function updateLabel() {
+        control.textContent = audio.paused ? 'Play Audio' : 'Pause Audio';
+        control.setAttribute('aria-pressed', audio.paused ? 'false' : 'true');
+    }
+
+    // Ensure audio is paused on load until user interaction
+    audio.pause();
+    updateLabel();
+
+    control.addEventListener('click', function () {
+        if (audio.paused) {
+            audio.play();
+        } else {
+            audio.pause();
+        }
+    });
+
+    audio.addEventListener('play', updateLabel);
+    audio.addEventListener('pause', updateLabel);
+    audio.addEventListener('ended', updateLabel);
+}
+
 document.addEventListener('DOMContentLoaded', function () {
     var placeholder = document.getElementById('nav-placeholder');
 
     if (!placeholder) {
         setupMenuInteractions();
+        setupAudioControls();
         return;
     }
 
@@ -43,9 +74,11 @@ document.addEventListener('DOMContentLoaded', function () {
         .then(function (html) {
             placeholder.innerHTML = html;
             setupMenuInteractions();
+            setupAudioControls();
         })
         .catch(function (error) {
             console.error('Failed to load navigation:', error);
             setupMenuInteractions();
+            setupAudioControls();
         });
 });
