@@ -1,3 +1,25 @@
+/* Skip to content link for accessibility */
+.skip-to-content {
+  position: absolute;
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 12px 24px;
+  background: #41c4d9;
+  color: #06121d;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 4px;
+  z-index: 10000;
+  transition: top 0.2s ease;
+}
+
+.skip-to-content:focus {
+  top: 20px;
+  outline: 3px solid #f5f7fa;
+  outline-offset: 2px;
+}
+
 /* Global layout */
 html,
 body {
@@ -9,25 +31,10 @@ body {
   overflow-x: hidden;
 }
 
-/* Background video */
+/* Background container */
 .bg {
   position: relative;
   min-height: 100vh;
-}
-
-.bg video {
-  position: fixed;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -2;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .bg video {
-    display: none;
-  }
 }
 
 .overlay {
@@ -181,10 +188,16 @@ body {
   transition: color 0.2s ease, border-color 0.2s ease, padding-left 0.2s ease;
 }
 
-.nav-links a:hover {
+.nav-links a:hover,
+.nav-links a:focus {
   color: #41c4d9;
   border-left-color: #41c4d9;
   padding-left: 20px;
+}
+
+.nav-links a:focus-visible {
+  outline: 2px solid #41c4d9;
+  outline-offset: 4px;
 }
 
 .sr-only {
@@ -308,6 +321,11 @@ body {
   border-color: rgba(65, 196, 217, 0.8);
 }
 
+.btn:focus-visible {
+  outline: 3px solid rgba(84, 224, 211, 0.8);
+  outline-offset: 3px;
+}
+
 .btn.primary {
   background: linear-gradient(135deg, #45b4ff, #54e0d3);
   border-color: transparent;
@@ -318,6 +336,11 @@ body {
 .btn.primary:focus {
   background: linear-gradient(135deg, #54e0d3, #7df8de);
   color: #041d2c;
+}
+
+.btn.primary:focus-visible {
+  outline: 3px solid #f5f7fa;
+  outline-offset: 3px;
 }
 
 .hero-highlights {

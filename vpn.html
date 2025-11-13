@@ -11,11 +11,27 @@
 </head>
 
 <body class="vpn-page">
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
     <header class="site-header page-header">
-        <div id="nav-placeholder"></div>
+        <nav class="site-nav" aria-label="Primary">
+            <button class="menu" type="button" aria-expanded="false" aria-controls="site-navigation">
+                <span class="hamburger-icon" aria-hidden="true">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+                <span class="sr-only">Toggle navigation</span>
+            </button>
+            <div class="nav-links" id="site-navigation" aria-hidden="true">
+                <a href="index.html">Home</a>
+                <a href="about.html">About David</a>
+                <a href="vpn.html">VPN Essay</a>
+                <a href="resume.html">Resume</a>
+            </div>
+        </nav>
     </header>
 
-    <main class="vpn-wrapper">
+    <main class="vpn-wrapper" id="main-content">
         <header class="vpn-header">
             <h1>VPN Fundamentals</h1>
             <p class="tagline">Understanding Virtual Private Networks and their role in modern internet security</p>

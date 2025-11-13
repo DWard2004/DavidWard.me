@@ -93,26 +93,6 @@ function setupAudioControls() {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-    var placeholder = document.getElementById('nav-placeholder');
-
-    if (!placeholder) {
-        setupMenuInteractions();
-        setupAudioControls();
-        return;
-    }
-
-    fetch('nav.html')
-        .then(function (response) {
-            return response.text();
-        })
-        .then(function (html) {
-            placeholder.innerHTML = html;
-            setupMenuInteractions();
-            setupAudioControls();
-        })
-        .catch(function (error) {
-            console.error('Failed to load navigation:', error);
-            setupMenuInteractions();
-            setupAudioControls();
-        });
+    setupMenuInteractions();
+    setupAudioControls();
 });

@@ -9,11 +9,27 @@
     <script src="script.js" defer></script>
 </head>
 <body class="about-page">
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
     <header class="site-header page-header">
-        <div id="nav-placeholder"></div>
+        <nav class="site-nav" aria-label="Primary">
+            <button class="menu" type="button" aria-expanded="false" aria-controls="site-navigation">
+                <span class="hamburger-icon" aria-hidden="true">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+                <span class="sr-only">Toggle navigation</span>
+            </button>
+            <div class="nav-links" id="site-navigation" aria-hidden="true">
+                <a href="index.html">Home</a>
+                <a href="about.html">About David</a>
+                <a href="vpn.html">VPN Essay</a>
+                <a href="resume.html">Resume</a>
+            </div>
+        </nav>
     </header>
 
-    <main class="about-wrapper">
+    <main class="about-wrapper" id="main-content">
         <header class="about-header">
             <h1>ABOUT DAVID</h1>
             <p class="tagline">Network administrator, lifelong learner, and outdoor enthusiast.</p>

@@ -11,18 +11,29 @@
 </head>
 
 <body class="resume-page">
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
     <div class="bg">
-        <video autoplay muted loop class="bg-video" playsinline>
-            <source src="movie.mp4" type="video/mp4">
-            Your browser does not support HTML5 video.
-        </video>
-
         <div class="overlay resume-overlay">
             <header class="site-header">
-                <div id="nav-placeholder"></div>
+                <nav class="site-nav" aria-label="Primary">
+                    <button class="menu" type="button" aria-expanded="false" aria-controls="site-navigation">
+                        <span class="hamburger-icon" aria-hidden="true">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </span>
+                        <span class="sr-only">Toggle navigation</span>
+                    </button>
+                    <div class="nav-links" id="site-navigation" aria-hidden="true">
+                        <a href="index.html">Home</a>
+                        <a href="about.html">About David</a>
+                        <a href="vpn.html">VPN Essay</a>
+                        <a href="resume.html">Resume</a>
+                    </div>
+                </nav>
             </header>
 
-            <main class="resume-content">
+            <main class="resume-content" id="main-content">
                 <article class="resume-card">
                     <header>
                         <h1>David Ward</h1>
