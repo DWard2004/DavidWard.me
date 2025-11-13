@@ -20,7 +20,7 @@ body.about-page {
 
 .about-wrapper {
     margin: 0 auto;
-    padding: 120px 24px 48px;
+    padding: clamp(5rem, 10vw, 7.5rem) 24px clamp(3rem, 6vw, 4rem);
     max-width: var(--max-width);
     display: flex;
     flex-direction: column;
@@ -54,7 +54,7 @@ body.about-page {
 .card {
     background: var(--card-bg);
     border-radius: var(--card-radius);
-    padding: 32px;
+    padding: clamp(1.75rem, 4vw, 2.5rem);
     box-shadow: var(--shadow);
     display: flex;
     flex-direction: column;
@@ -178,11 +178,11 @@ body.about-page {
 
 @media (max-width: 600px) {
     .about-wrapper {
-        padding-top: 100px;
+        padding: clamp(4.5rem, 12vw, 6rem) 20px clamp(2.5rem, 8vw, 3.5rem);
     }
 
     .card {
-        padding: 24px;
+        padding: clamp(1.5rem, 7vw, 1.75rem);
     }
 
     .profile-photo {

@@ -1,0 +1,173 @@
+:root {
+    --bg-color: #0b0f19;
+    --overlay-gradient: radial-gradient(circle at top left, #1e2a4a, #090b13 55%, #05060b);
+    --card-bg: #ffffff;
+    --card-text: #000000;
+    --accent: #45b4ff;
+    --accent-hover: #54e0d3;
+    --card-radius: 22px;
+    --shadow: 0 24px 55px rgba(4, 12, 32, 0.5);
+}
+
+body.resume-page {
+    margin: 0;
+    background: var(--overlay-gradient);
+    color: #f5f7fa;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+}
+
+.resume-overlay {
+    gap: clamp(2rem, 5vw, 3.5rem);
+}
+
+.resume-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+.resume-card {
+    background: var(--card-bg);
+    color: var(--card-text);
+    width: min(100%, 960px);
+    border-radius: var(--card-radius);
+    box-shadow: var(--shadow);
+    padding: clamp(1.75rem, 5vw, 3rem);
+    box-sizing: border-box;
+    line-height: 1.7;
+}
+
+.resume-card h1 {
+    margin: 0;
+    font-size: clamp(2.2rem, 4vw, 3rem);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+.resume-card h2 {
+    margin: 2rem 0 0.75rem;
+    font-size: clamp(1.4rem, 2.5vw, 1.75rem);
+    color: #06253a;
+    position: relative;
+}
+
+.resume-card h2:first-of-type {
+    margin-top: 1.5rem;
+}
+
+.resume-card h3 {
+    margin: 1.25rem 0 0.35rem;
+    font-size: clamp(1.1rem, 2vw, 1.3rem);
+    color: #06253a;
+}
+
+.resume-card p {
+    margin: 0;
+    color: #1c2736;
+}
+
+.resume-card p + p {
+    margin-top: 0.75rem;
+}
+
+.resume-card ul {
+    margin: 0.75rem 0 0;
+    padding-left: 1.15rem;
+    color: #1c2736;
+}
+
+.resume-card li {
+    margin-bottom: 0.5rem;
+}
+
+.resume-card li:last-child {
+    margin-bottom: 0;
+}
+
+.resume-list {
+    list-style: disc;
+    display: grid;
+    gap: 0.5rem;
+}
+
+.resume-columns {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.resume-divider {
+    border: none;
+    border-top: 1px solid rgba(6, 37, 58, 0.15);
+    margin: 1.5rem 0;
+}
+
+.resume-contact {
+    margin-top: 0.75rem;
+    font-weight: 500;
+    color: #1c2736;
+    line-height: 1.6;
+}
+
+.resume-section + .resume-section {
+    margin-top: 1.5rem;
+}
+
+.resume-card strong {
+    color: #031520;
+}
+
+.resume-actions {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.download-button {
+    background: linear-gradient(135deg, var(--accent), var(--accent-hover));
+    color: #031520;
+    padding: 0.9rem 2.5rem;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    border: none;
+    box-shadow: 0 12px 25px rgba(69, 180, 255, 0.35);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.download-button:hover,
+.download-button:focus {
+    transform: translateY(-2px);
+    box-shadow: 0 18px 36px rgba(84, 224, 211, 0.4);
+}
+
+.download-button:focus-visible {
+    outline: 2px solid rgba(84, 224, 211, 0.8);
+    outline-offset: 4px;
+}
+
+@media (max-width: 768px) {
+    .resume-content {
+        gap: 1.75rem;
+    }
+
+    .resume-card {
+        padding: clamp(1.5rem, 6vw, 2.25rem);
+    }
+}
+
+@media (max-width: 520px) {
+    .resume-card {
+        border-radius: 18px;
+    }
+
+    .resume-actions {
+        padding-bottom: 1.5rem;
+    }
+
+    .download-button {
+        width: 100%;
+        text-align: center;
+    }
+}
