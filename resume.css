@@ -1,10 +1,9 @@
 :root {
     --bg-color: #0b0f19;
     --overlay-gradient: radial-gradient(circle at top left, #1e2a4a, #090b13 55%, #05060b);
-    --card-bg: #121829;
-    --card-text: #f4f7ff;
-    --text-secondary: #a9b4d6;
-    --accent: #4da3ff;
+    --card-bg: #ffffff;
+    --card-text: #000000;
+    --accent: #45b4ff;
     --accent-hover: #54e0d3;
     --card-radius: 22px;
     --shadow: 0 24px 55px rgba(4, 12, 32, 0.5);
@@ -50,7 +49,7 @@ body.resume-page {
 .resume-card h2 {
     margin: 2rem 0 0.75rem;
     font-size: clamp(1.4rem, 2.5vw, 1.75rem);
-    color: var(--accent);
+    color: #06253a;
     position: relative;
 }
 
@@ -61,12 +60,12 @@ body.resume-page {
 .resume-card h3 {
     margin: 1.25rem 0 0.35rem;
     font-size: clamp(1.1rem, 2vw, 1.3rem);
-    color: var(--card-text);
+    color: #06253a;
 }
 
 .resume-card p {
     margin: 0;
-    color: var(--text-secondary);
+    color: #1c2736;
 }
 
 .resume-card p + p {
@@ -76,7 +75,7 @@ body.resume-page {
 .resume-card ul {
     margin: 0.75rem 0 0;
     padding-left: 1.15rem;
-    color: var(--text-secondary);
+    color: #1c2736;
 }
 
 .resume-card li {
@@ -99,14 +98,14 @@ body.resume-page {
 
 .resume-divider {
     border: none;
-    border-top: 1px solid rgba(77, 163, 255, 0.15);
+    border-top: 1px solid rgba(6, 37, 58, 0.15);
     margin: 1.5rem 0;
 }
 
 .resume-contact {
     margin-top: 0.75rem;
     font-weight: 500;
-    color: var(--text-secondary);
+    color: #1c2736;
     line-height: 1.6;
 }
 
@@ -115,7 +114,7 @@ body.resume-page {
 }
 
 .resume-card strong {
-    color: var(--card-text);
+    color: #031520;
 }
 
 .resume-actions {
