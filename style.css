@@ -5,7 +5,7 @@
   left: 50%;
   transform: translateX(-50%);
   padding: 12px 24px;
-  background: #41c4d9;
+  background: #4da3ff;
   color: #06121d;
   text-decoration: none;
   font-weight: 600;
@@ -143,14 +143,14 @@ body {
   width: 28px;
   height: 2px;
   border-radius: 999px;
-  background: linear-gradient(90deg, #9cd3f0, #41c4d9);
+  background: linear-gradient(90deg, #a9b4d6, #4da3ff);
   transition: transform 0.3s ease, opacity 0.3s ease, background 0.3s ease;
   will-change: transform, opacity;
 }
 
 .menu:hover .hamburger-icon span,
 .menu:focus-visible .hamburger-icon span {
-  background: linear-gradient(90deg, #ffffff, #9cd3f0);
+  background: linear-gradient(90deg, #ffffff, #4da3ff);
 }
 
 .nav-links {
@@ -194,13 +194,13 @@ body {
 
 .nav-links a:hover,
 .nav-links a:focus {
-  color: #41c4d9;
-  border-left-color: #41c4d9;
+  color: #4da3ff;
+  border-left-color: #4da3ff;
   padding-left: 20px;
 }
 
 .nav-links a:focus-visible {
-  outline: 2px solid #41c4d9;
+  outline: 2px solid #4da3ff;
   outline-offset: 4px;
 }
 
@@ -233,8 +233,8 @@ body {
 
 #audioControl:focus,
 #audioControl:hover {
-  background: rgba(65, 196, 217, 0.9);
-  border-color: rgba(65, 196, 217, 0.9);
+  background: rgba(77, 163, 255, 0.9);
+  border-color: rgba(77, 163, 255, 0.9);
   color: #06253a;
   transform: translateY(-1px);
 }
@@ -274,7 +274,7 @@ body {
   font-size: 0.95rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: #9cd3f0;
+  color: #a9b4d6;
   margin: 0;
 }
 
@@ -322,23 +322,23 @@ body {
 .btn:hover,
 .btn:focus {
   transform: translateY(-1px);
-  border-color: rgba(65, 196, 217, 0.8);
+  border-color: rgba(77, 163, 255, 0.8);
 }
 
 .btn:focus-visible {
-  outline: 3px solid rgba(84, 224, 211, 0.8);
+  outline: 3px solid rgba(77, 163, 255, 0.8);
   outline-offset: 3px;
 }
 
 .btn.primary {
-  background: linear-gradient(135deg, #45b4ff, #54e0d3);
+  background: linear-gradient(135deg, #4da3ff, #5eb0ff);
   border-color: transparent;
   color: #031520;
 }
 
 .btn.primary:hover,
 .btn.primary:focus {
-  background: linear-gradient(135deg, #54e0d3, #7df8de);
+  background: linear-gradient(135deg, #5eb0ff, #7ac0ff);
   color: #041d2c;
 }
 
@@ -378,7 +378,7 @@ body {
 }
 
 .hero-highlights strong {
-  color: #9cd3f0;
+  color: #4da3ff;
   font-weight: 600;
 }
 
@@ -403,7 +403,7 @@ body {
   font-size: 2.4rem;
   font-weight: 700;
   letter-spacing: 0.08em;
-  color: #7fefff;
+  color: #4da3ff;
 }
 
 .metric-card h2 span {
@@ -546,11 +546,11 @@ body {
   font-size: 1.05rem;
   font-weight: 600;
   letter-spacing: 0.04em;
-  box-shadow: 0 8px 20px rgba(69, 180, 255, 0.25);
+  box-shadow: 0 8px 20px rgba(77, 163, 255, 0.25);
 }
 
 .cta-button:hover {
-  box-shadow: 0 12px 30px rgba(69, 180, 255, 0.4);
+  box-shadow: 0 12px 30px rgba(77, 163, 255, 0.4);
 }
 
 /* Footer */
