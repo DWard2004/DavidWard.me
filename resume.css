@@ -3,8 +3,8 @@
     --overlay-gradient: radial-gradient(circle at top left, #1e2a4a, #090b13 55%, #05060b);
     --card-bg: #ffffff;
     --card-text: #000000;
-    --accent: #4da3ff;
-    --accent-hover: #5eb0ff;
+    --accent: #45b4ff;
+    --accent-hover: #54e0d3;
     --card-radius: 22px;
     --shadow: 0 24px 55px rgba(4, 12, 32, 0.5);
 }

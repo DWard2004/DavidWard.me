@@ -331,14 +331,14 @@ body {
 }
 
 .btn.primary {
-  background: linear-gradient(135deg, #4da3ff, #5eb0ff);
+  background: linear-gradient(135deg, #45b4ff, #54e0d3);
   border-color: transparent;
   color: #031520;
 }
 
 .btn.primary:hover,
 .btn.primary:focus {
-  background: linear-gradient(135deg, #5eb0ff, #7ac0ff);
+  background: linear-gradient(135deg, #54e0d3, #7df8de);
   color: #041d2c;
 }
 
